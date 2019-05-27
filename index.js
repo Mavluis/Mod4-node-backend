@@ -34,7 +34,7 @@ async function init() {
 
   const port = 3000;
   app.listen(port, () => {
-    console.log(`Server running and listening on port ${port}`);
+    console.log(`Server running and listening on port ${process.env.PORT}`);
   });
 }
 
