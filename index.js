@@ -15,6 +15,14 @@ app.use('/api', routers.accountRouter);
 app.use('/api', routers.postRouter);
 app.use('/api', routers.userRouter);
 
+process.on('uncaughtException', (err) => {
+  console.error('excepción inesperada', err.message, err);
+});
+
+process.on('unhandledRejection', (err) => {
+  console.error('Error inesperado', err.message, err);
+});
+
 async function init() {
   try {
     await mysqlPool.connect();
