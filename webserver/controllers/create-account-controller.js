@@ -87,7 +87,7 @@ async function addVerificationCode(uuid) {
 }
 
 async function sendEmailRegistration(userEmail, verificationCode) {
-  const linkActivacion = `http://localhost:3000/api/account/activate?verification_code=${verificationCode}`;
+  const linkActivacion = `https://myproyect-socialnetwork.herokuapp.com/api/account/activate?verification_code=${verificationCode}`;
   const msg = {
     to: userEmail,
     from: {
